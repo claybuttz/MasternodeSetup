@@ -8,12 +8,8 @@ COIN_CLI='sap-cli'
 COIN_TX='sap-tx'
 COIN_PATH='/usr/local/bin/'
 OS_VERSION=$(lsb_release -d)
-if [[ $(lsb_release -d) == *16.04* ]]; then
-	COIN_TGZP='https://github.com/sappcoin-com/SAPP/releases/download/v1.2.2/SAPPv122-Daemon-Ubuntu1604.zip'
-elif [[ $(lsb_release -d) == *18.04* ]]; then
-	COIN_TGZP='https://github.com/sappcoin-com/SAPP/releases/download/v1.2.2/SAPPv122-Daemon-Ubuntu1804.zip'
-fi
-COIN_BOOTSTRAP='https://github.com/sappcoin-com/SAPP/releases/download/v1.2.2/bootstrap.zip'
+COIN_TGZP='https://github.com/sappcoin-com/SAPP/releases/download/v1.2.3/SAPP-v1.2.3-Daemon-Linux.zip'
+COIN_BOOTSTRAP='https://github.com/sappcoin-com/SAPP/releases/download/v1.2.3/bootstrap.zip'
 COIN_BOOTSTRAP_NAME=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
 COIN_TGZ=$(echo $COIN_TGZP | awk -F'/' '{print $NF}')
 COIN_NAME='sap'
@@ -90,17 +86,10 @@ function download_node() {
   cd $TMP_FOLDER >/dev/null 2>&1
   wget -q $COIN_TGZP
   #compile_error
-#   tar jxvf $COIN_TGZ >/dev/null 2>&1
-#   mv sap/sap-cli .
-#   mv sap/sap-tx .
-#   mv sap/sapd .
-#   rm -fr sap/
   unzip $COIN_TGZ >/dev/null 2>&1
   rm -r $COIN_TGZ >/dev/null 2>&1
 
   #compile_error
-  chmod +x $COIN_DAEMON >/dev/null 2>&1
-  chmod +x $COIN_CLI >/dev/null 2>&1
   chmod +x $COIN_DAEMON >/dev/null 2>&1
   chmod +x $COIN_CLI >/dev/null 2>&1
   chmod +x $COIN_TX >/dev/null 2>&1
@@ -108,6 +97,8 @@ function download_node() {
   cp $COIN_DAEMON /root/ >/dev/null 2>&1
   cp $COIN_CLI $COIN_PATH >/dev/null 2>&1
   cp $COIN_CLI /root/ >/dev/null 2>&1
+  cp $COIN_TX $COIN_PATH >/dev/null 2>&1
+  cp $COIN_TX /root/ >/dev/null 2>&1
   cd ~ >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear
@@ -261,17 +252,6 @@ bind=$NODEIP
 masternode=1
 masternodeaddr=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
-#ADDNODES
-addnode=146.71.79.242
-addnode=45.61.49.232
-addnode=185.181.9.42
-addnode=194.37.80.5
-addnode=103.102.47.225
-addnode=103.125.216.138
-addnode=103.102.46.71
-addnode=103.125.218.216
-addnode=45.12.32.17
-addnode=5.188.133.148
 EOF
 }
 
