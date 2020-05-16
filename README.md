@@ -1,17 +1,17 @@
 # Sapphire Coin (SAPP) Masternode Installation Scripts 
 
-1. masternodeinstall.sh<br>
+#### masternodeinstall.sh<br>
 This script installs the masternode for both Ubuntu v16.04 and Ubuntu v18.04. <br>
 It has a progress bar for long processes.<br>
 No raw command output is shown in this script output.<br>
 
-2. masternodeinstall_beer.sh<br>
+#### masternodeinstall_beer.sh<br>
 This script installs the masternode for both Ubuntu v16.04 and Ubuntu v18.04. <br>
 It has a progress bar with a "glass of beer" icon for fun. <br>
 It's not suitable for users under age of 18.<br>
 No raw command output is shown in this script output.<br>
 
-3. masternodeinstall_verbose_and_debug.sh<br>
+#### masternodeinstall_verbose_and_debug.sh<br>
 This script installs the masternode for both Ubuntu v16.04 and Ubuntu v18.04.<br>
 It has a progress bar for long processes. <br>
 All raw command outputs is shown while running this script for debugging the process of masternode installation steps.<br>
