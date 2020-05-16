@@ -42,16 +42,16 @@ sudo chmod +x install-sapp-linux-18.04.sh <br>
 
 To install Sapphire Coin Masternode use the following command:
 ```bash
-bash <( curl -sL https://raw.githubusercontent.com/bedri/MasternodeSetup/master/masternodeinstall.sh)
+bash <( curl -sL https://raw.githubusercontent.com/sappcoin-com/MasternodeSetup/master/masternodeinstall.sh)
 ```
 
 or you can also use this _while drinking beer_ (![+18](https://placehold.it/15/f03c15/000000?text=+) **`+18`**)
 
 ```bash
-bash <( curl -sL https://raw.githubusercontent.com/bedri/MasternodeSetup/master/masternodeinstall_beer.sh)
+bash <( curl -sL https://raw.githubusercontent.com/sappcoin-com/MasternodeSetup/master/masternodeinstall_beer.sh)
 ```
 
 For seeing verbose output (the output of all the commands) use the command:
 ```bash
-bash <( curl -sL https://raw.githubusercontent.com/bedri/MasternodeSetup/master/masternodeinstall_verbose_and_debug.sh)
+bash <( curl -sL https://raw.githubusercontent.com/sappcoin-com/MasternodeSetup/master/masternodeinstall_verbose_and_debug.sh)
 ```
