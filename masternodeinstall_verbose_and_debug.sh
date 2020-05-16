@@ -8,12 +8,8 @@ COIN_CLI='sap-cli'
 COIN_TX='sap-tx'
 COIN_PATH='/usr/local/bin/'
 OS_VERSION=$(lsb_release -d)
-if [[ $(lsb_release -d) == *16.04* ]]; then
-	COIN_TGZP='https://github.com/sappcoin-com/SAPP/releases/download/v1.2.2/SAPPv122-Daemon-Ubuntu1604.zip'
-elif [[ $(lsb_release -d) == *18.04* ]]; then
-	COIN_TGZP='https://github.com/sappcoin-com/SAPP/releases/download/v1.2.2/SAPPv122-Daemon-Ubuntu1804.zip'
-fi
-COIN_BOOTSTRAP='https://github.com/sappcoin-com/SAPP/releases/download/v1.2.2/bootstrap.zip'
+COIN_TGZP='https://github.com/sappcoin-com/SAPP/releases/download/v1.2.3/SAPP-v1.2.3-Daemon-Linux.zip'
+COIN_BOOTSTRAP='https://github.com/sappcoin-com/SAPP/releases/download/v1.2.3/bootstrap.zip'
 COIN_BOOTSTRAP_NAME=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
 COIN_TGZ=$(echo $COIN_TGZP | awk -F'/' '{print $NF}')
 COIN_NAME='sap'
@@ -90,11 +86,6 @@ function download_node() {
   cd $TMP_FOLDER
   wget $COIN_TGZP
   #compile_error
-#   tar jxvf $COIN_TGZ >/dev/null 2>&1
-#   mv sapp/sapp-cli .
-#   mv sapp/sapp-tx .
-#   mv sapp/sappd .
-#   rm -fr sapp/
   unzip $COIN_TGZ
   rm -r $COIN_TGZ
 
