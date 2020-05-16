@@ -1,4 +1,4 @@
-# MasternodeSetup
+# Sapphire Coin (SAPP) Masternode Installation Scripts 
 
 1. masternodeinstall.sh<br>
 This script installs the masternode for both Ubuntu v16.04 and Ubuntu v18.04. <br>
