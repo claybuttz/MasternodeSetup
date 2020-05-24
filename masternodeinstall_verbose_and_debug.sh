@@ -15,8 +15,8 @@ COIN_TGZ=$(echo $COIN_TGZP | awk -F'/' '{print $NF}')
 COIN_NAME='sap'
 PROJECT_NAME='Sapphire Coin (SAPP)'
 COIN_EXPLORER='https://www.sappexplorer.com/'
-COIN_PORT=29442
-RPC_PORT=29443
+COIN_PORT=45328
+RPC_PORT=45329
 
 NODEIP=$(curl -s4 icanhazip.com)
 
