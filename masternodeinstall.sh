@@ -8,11 +8,12 @@ COIN_CLI='sap-cli'
 COIN_TX='sap-tx'
 COIN_PATH='/usr/local/bin/'
 OS_VERSION=$(lsb_release -d)
-COIN_TGZP='https://github.com/sappcoin-com/SAPP/releases/download/v1.2.3/SAPP-v1.2.3-Daemon-Linux.zip'
-COIN_BOOTSTRAP='https://github.com/sappcoin-com/SAPP/releases/download/v1.2.3/bootstrap.zip'
+COIN_TGZP='https://github.com/sappcoin-com/SAPP/releases/download/v1.3.0/SAPP-v1.3.0-Daemon-Linux.zip'
+COIN_BOOTSTRAP='https://github.com/sappcoin-com/SAPP/releases/download/v1.3.0/bootstrap.zip'
 COIN_BOOTSTRAP_NAME=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
 COIN_TGZ=$(echo $COIN_TGZP | awk -F'/' '{print $NF}')
 COIN_NAME='sap'
+COIN_NAME_OLD='sapd'
 PROJECT_NAME='Sapphire Coin (SAPP)'
 COIN_EXPLORER='https://www.sappexplorer.com/'
 COIN_PORT=29442
@@ -35,6 +36,7 @@ purgeOldInstallation() {
     echo -e "${YELLOW}Searching and removing old ${BLUE}$PROJECT_NAME ${GREEN}Masternode ${YELLOW}files and configurations${NC}"
 	#stopping service
 	systemctl stop $COIN_NAME.service  > /dev/null 2>&1 &
+	systemctl stop $COIN_NAME_OLD.service  > /dev/null 2>&1 &
 	echo -ne "${RED}${LICON}${LICON}${LICON} ${GREEN}(10%)${NC}\r"
 	sleep 1
 	echo -ne "${RED}${LICON}${LICON}${LICON}${LICON}${LICON}${LICON} ${GREEN}(20%)${NC}\r"
