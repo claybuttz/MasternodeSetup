@@ -8,7 +8,7 @@ COIN_CLI='sap-cli'
 COIN_TX='sap-tx'
 COIN_PATH='/usr/local/bin/'
 OS_VERSION=$(lsb_release -d)
-COIN_TGZP='https://github.com/sappcoin-com/SAPP/releases/download/v1.3.0/SAPP-v1.3.0-Daemon-Linux.zip'
+COIN_TGZP='https://github.com/sappcoin-com/SAPP/releases/download/v1.3.1/sapp-v1.3.1-Linux.zip'
 COIN_BOOTSTRAP='https://github.com/sappcoin-com/SAPP/releases/download/v1.3.0/bootstrap.zip'
 COIN_BOOTSTRAP_NAME=$(echo $COIN_BOOTSTRAP | awk -F'/' '{print $NF}')
 COIN_TGZ=$(echo $COIN_TGZP | awk -F'/' '{print $NF}')
@@ -254,17 +254,6 @@ bind=$NODEIP
 masternode=1
 masternodeaddr=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
-#ADDNODES
-addnode=146.71.79.242
-addnode=45.61.49.232
-addnode=185.181.9.42
-addnode=194.37.80.5
-addnode=103.102.47.225
-addnode=103.125.216.138
-addnode=103.102.46.71
-addnode=103.125.218.216
-addnode=45.12.32.17
-addnode=5.188.133.148
 EOF
 }
 
