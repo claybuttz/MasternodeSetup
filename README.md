@@ -39,3 +39,4 @@ For seeing verbose output (the output of all the commands) use the command:
 ```bash
 bash <( curl -sL https://raw.githubusercontent.com/sappcoin-com/MasternodeSetup/master/masternodeinstall_verbose_and_debug.sh)
 ```
+
